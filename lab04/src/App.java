@@ -5,10 +5,8 @@ import java.util.Scanner;
 
 public class App {
 
-    // === Ajuste aqui se quiser usar outra conexão ===
     private static final String URL = "jdbc:postgresql://aws-1-sa-east-1.pooler.supabase.com:6543/postgres?user=postgres.hywstzdzjftkkwrhpqjl&password=Acl150304!";
 
-    // Modelo simples
     public static class Conta {
         public long nroConta;
         public double saldo;
@@ -25,7 +23,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println("CRUD interativo de CONTAS (PostgreSQL)");
         try (Connection conn = DriverManager.getConnection(URL);
              Scanner scanner = new Scanner(System.in)) {
 
